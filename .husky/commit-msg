@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "================================== Commit Message Check =================================="
+pnpm commitlint --edit "$1"
