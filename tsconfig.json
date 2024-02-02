@@ -28,7 +28,7 @@
     /* 模块查找规则 */
     "moduleResolution": "node",
     /* 要编译的ts文件在哪个文件夹（及其子文件夹） 由于项目走到是webpack，这里只是给编译器做提示，不影响编译（下同） */
-    "rootDir": "./src" ,
+//    "rootDir": "./packages" ,
     /*
     非相对路径下的文件查找入口 给编译器做提示，不影响编译
     比如：import { Button } from 'components/Button';
