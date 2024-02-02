@@ -1,1 +1,7 @@
-node_modules/*
+**/node_modules/*
+
+packages/*/build/*
+packages/*/dist/*
+
+packages/os-ui/es/*
+packages/os-ui/lib/*

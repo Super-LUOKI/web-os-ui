@@ -1,8 +1,7 @@
 {
   "name": "web-os-ui",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Web OS UI主项目",
   "scripts": {
     "prepare": "husky",
     "lint": "eslint --ext .ts,.tsx,.jsx,.js --fix --quiet ./packages",

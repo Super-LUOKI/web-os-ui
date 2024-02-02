@@ -1,8 +1,8 @@
 {
-  "name": "examples",
+  "name": "@web-os-ui/examples",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "示例",
+  "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
