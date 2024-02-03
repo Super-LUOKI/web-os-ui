@@ -20,7 +20,8 @@ module.exports = {
 	plugins: ["react", "@typescript-eslint", "prettier"],
 	rules: {
 		"@typescript-eslint/no-unused-vars": "off",
-		"prettier/prettier": ["error", {endOfLine: "auto"}],
+		// "prettier/prettier": ["error", { endOfLine: "auto" }],
+		"prettier/prettier": "off",
 		"@typescript-eslint/no-var-requires": "off",
 	},
 }

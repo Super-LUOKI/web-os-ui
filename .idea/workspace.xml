@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8967d83d-d3d6-48ee-a4dd-2d681e8b9a8c" name="Changes" comment="style: workspace code format">
+    <list default="true" id="8967d83d-d3d6-48ee-a4dd-2d681e8b9a8c" name="Changes" comment="feat: add os-ui config">
       <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.prettierrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/examples/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/examples/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/examples/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/examples/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/os-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/os-ui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/os-ui/src/Button/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/os-ui/src/Button/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/os-ui/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/os-ui/webpack.base.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,17 +44,77 @@
     "git-widget-placeholder": "main",
     "javascript.nodejs.core.library.configured.version": "16.20.0",
     "javascript.nodejs.core.library.typings.version": "16.18.79",
+    "last_opened_file_path": "D:/Projects/LuoKing/web-os-ui/packages/os-ui",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "pnpm",
     "prettierjs.PrettierConfiguration.Package": "D:\\Projects\\LuoKing\\web-os-ui\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
-    "ts.external.directory.path": "D:\\Projects\\LuoKing\\web-os-ui\\packages\\os-ui\\node_modules\\typescript\\lib",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "D:\\Projects\\LuoKing\\web-os-ui\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\LuoKing\web-os-ui\packages\os-ui" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\LuoKing\web-os-ui\packages\examples\scripts" />
+      <recent name="D:\Projects\LuoKing\web-os-ui\packages\docs\src\compontents" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.build:all">
+    <configuration name="build:all" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/packages/os-ui/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build:all" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="build:esm" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/packages/os-ui/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build:esm" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="build:umd" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/packages/os-ui/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build:umd" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="docz:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/packages/components-docs/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="docz:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build:all" />
+        <item itemvalue="npm.build:umd" />
+        <item itemvalue="npm.build:esm" />
+        <item itemvalue="npm.docz:dev" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -60,7 +123,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706894389841</updated>
-      <workItem from="1706894396606" duration="8553000" />
+      <workItem from="1706894396606" duration="10243000" />
+      <workItem from="1706969743717" duration="1426000" />
+      <workItem from="1706971660654" duration="13047000" />
     </task>
     <task id="LOCAL-00001" summary="style: workspace code format">
       <created>1706896421260</created>
@@ -69,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706896421261</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: add os-ui config">
+      <created>1706904061473</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706904061473</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -77,6 +149,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="style: workspace code format" />
-    <option name="LAST_COMMIT_MESSAGE" value="style: workspace code format" />
+    <MESSAGE value="feat: add os-ui config" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add os-ui config" />
   </component>
 </project>

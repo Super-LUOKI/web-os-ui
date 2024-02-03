@@ -5,3 +5,6 @@ packages/*/dist/*
 
 packages/os-ui/es/*
 packages/os-ui/lib/*
+packages/os-ui/dist/*
+
+packages/docs/.docz/**

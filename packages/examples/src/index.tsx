@@ -1,5 +1,15 @@
-const abcc = 1;
+import React from "react"
+import ReactDOM from "react-dom/client"
+import { Button } from "@web-os-ui/os-ui"
 
-const hello = "hello world";
+const App = () => {
+	return (
+		<div>
+			hello world111<Button>Hello</Button>
+		</div>
+	)
+}
 
-export default {};
+const root = ReactDOM.createRoot(document.getElementById("app")!)
+// v18 的新方法
+root.render(<App />)

@@ -1,0 +1,47 @@
+const path = require("path")
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin
+
+module.exports = {
+	mode: "production",
+	resolve: {
+		// 配置 extensions 来告诉 webpack 在没有书写后缀时，以什么样的顺序去寻找文件
+		extensions: [".js", ".json", ".jsx", ".ts", ".tsx"], // 如果项目中只有 tsx 或 ts 可以将其写在最前面
+	},
+	module: {
+		rules: [
+			{
+				test: /.(jsx?)|(tsx?)$/,
+				exclude: /node_modules/,
+				use: {
+					loader: "babel-loader",
+					options: {
+						presets: [
+							[
+								"@babel/preset-env",
+								{
+									targets: "last 2 versions, > 0.2%, not dead", // 根据项目去配置
+									useBuiltIns: "usage", // 会根据配置的目标环境找出需要的polyfill进行部分引入
+									corejs: 3, // 使用 core-js@3 版本
+								},
+							],
+							["@babel/preset-typescript"],
+							["@babel/preset-react"],
+						],
+					},
+				},
+			},
+		],
+	},
+	// 不打包指定的包，减小包体积
+	externals: {
+		react: "React",
+		"react-dom": "ReactDOM",
+	},
+}
+
+/**
+ * if need report
+ */
+if (process.env.analyse === "on") {
+	module.exports.plugins = (module.exports.plugins || []).concat([new BundleAnalyzerPlugin()])
+}
