@@ -1,6 +1,12 @@
 import React from "react"
 
-export const Button: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+	/** 按钮文本 */
+	children: React.ReactNode
+	/** 按钮类型 */
+	type: "primary" | "secondary"
+}
+export const Button: React.FC<ButtonProps> = ({ children }) => {
 	return <button>{children}</button>
 }
 

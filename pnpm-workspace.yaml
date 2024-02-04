@@ -1,4 +1,4 @@
 packages:
   # 表示packages目录下的任何一个直接文件夹都是一个子包 同样也可以指定具体的包路径
   - "packages/*"
-  # - 'xxx/xxx'
+  - "docs"
