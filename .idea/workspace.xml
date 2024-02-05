@@ -4,16 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8967d83d-d3d6-48ee-a4dd-2d681e8b9a8c" name="Changes" comment="feat: update os-ui webpack config &amp;&amp; create example project &amp;&amp; initial docz config">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+    <list default="true" id="8967d83d-d3d6-48ee-a4dd-2d681e8b9a8c" name="Changes" comment="feat: init docusaurus docs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/docs/doczrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/docs/src/compontents/button.mdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/docs/src/index.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/docs/src/index.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/os-ui/src/Button/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/os-ui/src/Button/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-workspace.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-workspace.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/docs/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/docs/src/index.mdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/docs/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/blog/2019-05-28-first-blog-post.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/blog/2019-05-29-long-blog-post.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/blog/2021-08-01-mdx-blog-post.mdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/blog/2021-08-26-welcome/docusaurus-plushie-banner.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/blog/2021-08-26-welcome/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/blog/authors.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/docs/luoking/intro.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/docs/luoking/luoking-markdown-features.mdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/docs/tutorial-basics/_category_.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/docs/tutorial-basics/congratulations.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/docs/tutorial-basics/create-a-blog-post.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/docs/tutorial-basics/create-a-document.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/docs/tutorial-basics/create-a-page.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/docs/tutorial-basics/deploy-your-site.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/docs/tutorial-basics/markdown-features.mdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/docs/tutorial-extras/_category_.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/docs/tutorial-extras/img/docsVersionDropdown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/docs/tutorial-extras/img/localeDropdown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/docs/tutorial-extras/manage-docs-versions.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/docs/tutorial-extras/translate-your-site.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/docusaurus.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui-docs/docusaurus.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/sidebars.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui-docs/sidebars.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/src/pages/_index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui-docs/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/src/pages/luoking.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/src/pages/luokingmd.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/src/pages/markdown-page.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +61,9 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "javascript.nodejs.core.library.configured.version": "16.20.0",
-    "javascript.nodejs.core.library.typings.version": "16.18.79",
-    "last_opened_file_path": "D:/Projects/LuoKing/web-os-ui/packages/ui-docs/docs/luoking",
+    "javascript.nodejs.core.library.configured.version": "20.11.0",
+    "javascript.nodejs.core.library.typings.version": "20.11.0",
+    "last_opened_file_path": "D:/Projects/LuoKing/web-os-ui/packages/ui-docs/docs/advance",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -56,6 +77,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\LuoKing\web-os-ui\packages\ui-docs\docs\advance" />
       <recent name="D:\Projects\LuoKing\web-os-ui\packages\ui-docs\docs\luoking" />
       <recent name="D:\Projects\LuoKing\web-os-ui\packages\os-ui" />
     </key>
@@ -64,22 +86,12 @@
       <recent name="D:\Projects\LuoKing\web-os-ui\packages\docs\src\compontents" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.docz:build">
+  <component name="RunManager" selected="npm.start">
     <configuration name="build:all" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/packages/os-ui/package.json" />
       <command value="run" />
       <scripts>
         <script value="build:all" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="build:umd" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/packages/os-ui/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="build:umd" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -115,13 +127,23 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/packages/ui-docs/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.docz:build" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.docz:dev (1)" />
         <item itemvalue="npm.build:all" />
-        <item itemvalue="npm.build:umd" />
       </list>
     </recent_temporary>
   </component>
@@ -136,7 +158,8 @@
       <workItem from="1706894396606" duration="10243000" />
       <workItem from="1706969743717" duration="1426000" />
       <workItem from="1706971660654" duration="18135000" />
-      <workItem from="1707026943979" duration="8868000" />
+      <workItem from="1707026943979" duration="9222000" />
+      <workItem from="1707149046140" duration="8164000" />
     </task>
     <task id="LOCAL-00001" summary="style: workspace code format">
       <created>1706896421260</created>
@@ -159,16 +182,36 @@
       <option name="project" value="LOCAL" />
       <updated>1706984857214</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: init docusaurus docs">
+      <created>1707041742941</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707041742941</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="style: workspace code format" />
     <MESSAGE value="feat: add os-ui config" />
     <MESSAGE value="feat: update os-ui webpack config &amp;&amp; create example project &amp;&amp; initial docz config" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update os-ui webpack config &amp;&amp; create example project &amp;&amp; initial docz config" />
+    <MESSAGE value="feat: init docusaurus docs." />
+    <MESSAGE value="feat: init docusaurus docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: init docusaurus docs" />
   </component>
 </project>

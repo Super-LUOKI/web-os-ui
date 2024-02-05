@@ -28,8 +28,8 @@ const config: Config = {
 	// useful metadata like html lang. For example, if your site is Chinese, you
 	// may want to replace "en" with "zh-Hans".
 	i18n: {
-		defaultLocale: "en",
-		locales: ["en"],
+		defaultLocale: "zh-Hans",
+		locales: ["zh-Hans"],
 	},
 
 	presets: [
@@ -37,14 +37,10 @@ const config: Config = {
 			"classic",
 			{
 				docs: {
+					// 是否在文章页面加载面包屑
+					breadcrumbs: true,
 					routeBasePath: "/",
 					sidebarPath: "./sidebars.ts",
-					// Please change this to your repo.
-					// Remove this to remove the "edit this page" links.
-					editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-				},
-				blog: {
-					showReadingTime: true,
 					// Please change this to your repo.
 					// Remove this to remove the "edit this page" links.
 					editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
@@ -57,10 +53,18 @@ const config: Config = {
 	],
 
 	themeConfig: {
+		docs: {
+			sidebar: {
+				// 是否允许（手动）隐藏侧边栏（小屏幕仍然会自动隐藏）
+				hideable: false,
+				// 列表组项目自动折叠
+				autoCollapseCategories: false,
+			},
+		},
 		// Replace with your project's social card
 		image: "img/docusaurus-social-card.jpg",
 		navbar: {
-			title: "My Site",
+			title: "WebOS UI",
 			logo: {
 				alt: "My Site Logo",
 				src: "img/logo.svg",
@@ -68,13 +72,24 @@ const config: Config = {
 			items: [
 				{
 					type: "docSidebar",
-					sidebarId: "tutorialSidebar",
-					position: "left",
-					label: "Tutorial",
+					sidebarId: "autoSidebar",
+					position: "right",
+					label: "设计",
 				},
-				{ to: "/blog", label: "Blog", position: "left" },
 				{
-					href: "https://github.com/facebook/docusaurus",
+					type: "docSidebar",
+					sidebarId: "autoSidebar",
+					position: "right",
+					label: "指南",
+				},
+				{
+					type: "docSidebar",
+					sidebarId: "autoSidebar",
+					position: "right",
+					label: "组件",
+				},
+				{
+					href: "https://github.com/Super-LUOKI/web-os-ui",
 					label: "GitHub",
 					position: "right",
 				},
