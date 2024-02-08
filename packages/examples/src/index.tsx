@@ -5,7 +5,7 @@ import { Button } from "@web-os-ui/os-ui"
 const App = () => {
 	return (
 		<div>
-			hello world111<Button>Hello</Button>
+			hello world111<Button type="primary">Hello</Button>
 		</div>
 	)
 }

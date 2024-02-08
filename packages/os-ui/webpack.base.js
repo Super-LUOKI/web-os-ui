@@ -1,5 +1,8 @@
 const path = require("path")
+// 打包完分析包大小插件
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin
+// 删除上次打包文件的插件
+const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 
 module.exports = {
 	mode: "production",
@@ -12,26 +15,29 @@ module.exports = {
 			{
 				test: /.(jsx?)|(tsx?)$/,
 				exclude: /node_modules/,
-				use: {
-					loader: "babel-loader",
-					options: {
-						presets: [
-							[
-								"@babel/preset-env",
-								{
-									targets: "last 2 versions, > 0.2%, not dead", // 根据项目去配置
-									useBuiltIns: "usage", // 会根据配置的目标环境找出需要的polyfill进行部分引入
-									corejs: 3, // 使用 core-js@3 版本
-								},
+				use: [
+					{
+						loader: "babel-loader",
+						options: {
+							presets: [
+								[
+									"@babel/preset-env",
+									{
+										targets: "last 2 versions, > 0.2%, not dead", // 根据项目去配置
+										useBuiltIns: "usage", // 会根据配置的目标环境找出需要的polyfill进行部分引入
+										corejs: 3, // 使用 core-js@3 版本
+									},
+								],
+								["@babel/preset-typescript"],
+								["@babel/preset-react"],
 							],
-							["@babel/preset-typescript"],
-							["@babel/preset-react"],
-						],
+						},
 					},
-				},
+				],
 			},
 		],
 	},
+	plugins: [new CleanWebpackPlugin()],
 	// 不打包指定的包，减小包体积
 	externals: {
 		react: "React",

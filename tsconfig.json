@@ -1,90 +1,108 @@
 // 这个配置文件用于指定对TypeScript的配置（包括对编译器的配置）
 {
-	"compilerOptions": {
-		/*
-		 * 将 TypeScript 转换成 的JavaScript版本，
-		 * 由使用了babel-loader，所以此处对最终React在浏览器中的代码仍然是旧版本JavaScript
-		 * 此处配置不会影响最终代码
-		 */
-		"target": "es5",
-		// 本质上是用于ts的编译，如果为react则会转成React.createElement形式
-		// 由于webpack使用 @babel/preset-typescript 转译，其不会读取这个配置文件，
-		// 所以这里的作用是给WebStorm这类编辑器做类型检查，不设置，即使编辑器提示错误，但是并不会影响代码的顺利编译
-		"jsx": "react",
-		/*
-    指定生成的代码的模块化规范，由于使用Webpack编译，这里其实并没有什么作用，也不会起 编辑器 的提示作用
-    对于模块化规范：
-      * node package.json 中使用 type: module/commonjs 确定
-      * typescript tsconfig.json 使用 compilerOptions -> module 确定
-      * webpack webpack.config.js 使用 resolve ->  mainFields (默认为 ['browser'(浏览器相关), 'module'(ESModule), 'main'(CommonJs)) 确定
-
-      这三者都可以设置，是否会冲突？以什么为准？
-      我们编译的时候，是在webpack配置的编译入口，所以
-        * package.json 中的 main字段标记的入口其实没有作用，type也没有作用
-        * tsconfig.json 中的 compilerOptions -> module 也不会生效
-        * 使用的是webpack解析的模块化规范，由于传入数组，表示支持多个，所以可以混用 CommonJs和ESModule
-    */
-		"module": "esnext" /* Specify what module code is generated. */,
-		/* 模块查找规则 */
-		"moduleResolution": "node",
-		/* 要编译的ts文件在哪个文件夹（及其子文件夹） 由于项目走到是webpack，这里只是给编译器做提示，不影响编译（下同） */
-		//    "rootDir": "./packages" ,
-		/*
-    非相对路径下的文件查找入口 给编译器做提示，不影响编译
-    比如：import { Button } from 'components/Button';
-    那么最终是相当于: import { Button } from './components/Button';
+  "compilerOptions": {
+    "declaration": true,
+    //Generates corresponding d.ts files.
+    /*
+     * 将 TypeScript 转换成 的JavaScript版本，
+     * 由使用了babel-loader，所以此处对最终React在浏览器中的代码仍然是旧版本JavaScript
+     * 此处配置不会影响最终代码
      */
-		"baseUrl": "./",
-		/* 路径别名：由于使用的webpack构建，走的都是webpack，这里只是给编译器做提示，不影响编译 */
-		"paths": {
-			"@web-os-ui/os-ui/*": ["./packages/os-ui/src/*"],
-			"@web-os-ui/examples/*": ["./packages/examples/src/*"],
-		},
-		"allowJs": true /* Allow javascript files to be compiled. */,
-		/* 没作用，走的是 @babel/preset-typescript */
-		"sourceMap": true,
-		/* ts只做类型检查，编译后不输出文件，此处应该也没啥用 */
-		"noEmit": false /* Disable emitting files from a compilation. */,
-		/* 编译器会将共享的辅助函数导入到每个文件中，而不是在每个文件中生成 */
-		"importHelpers": true,
-		/* 保证导入和引用的文件名大小写一致 */
-		"forceConsistentCasingInFileNames": true,
+    "target": "es5",
+    // 本质上是用于ts的编译，如果为react则会转成React.createElement形式
+    // 由于webpack使用 @babel/preset-typescript 转译，其不会读取这个配置文件，
+    // 所以这里的作用是给WebStorm这类编辑器做类型检查，不设置，即使编辑器提示错误，但是并不会影响代码的顺利编译
+    "jsx": "react",
+    /*
+指定生成的代码的模块化规范，由于使用Webpack编译，这里其实并没有什么作用，也不会起 编辑器 的提示作用
+对于模块化规范：
+  * node package.json 中使用 type: module/commonjs 确定
+  * typescript tsconfig.json 使用 compilerOptions -> module 确定
+  * webpack webpack.config.js 使用 resolve ->  mainFields (默认为 ['browser'(浏览器相关), 'module'(ESModule), 'main'(CommonJs)) 确定
 
-		/* 类型检查相关 */
-		"strict": true /* Enable all strict type-checking options. */,
-		// "noImplicitAny": true,                            /* Enable error reporting for expressions and declarations with an implied 'any' type. */
-		// "strictNullChecks": true,                         /* When type checking, take into account 'null' and 'undefined'. */
-		// "strictFunctionTypes": true,                      /* When assigning functions, check to ensure parameters and the return values are subtype-compatible. */
-		// "strictBindCallApply": true,                      /* Check that the arguments for 'bind', 'call', and 'apply' methods match the original function. */
-		// "strictPropertyInitialization": true,             /* Check for class properties that are declared but not set in the constructor. */
-		// "noImplicitThis": true,                           /* Enable error reporting when 'this' is given the type 'any'. */
-		// "useUnknownInCatchVariables": true,               /* Default catch clause variables as 'unknown' instead of 'any'. */
-		// "alwaysStrict": true,                             /* Ensure 'use strict' is always emitted. */
-		"noUnusedLocals": false /* Enable error reporting when local variables aren't read. */,
-		"noUnusedParameters": false /* Raise an error when a function parameter isn't read. */,
-		// "exactOptionalPropertyTypes": true,               /* Interpret optional property types as written, rather than adding 'undefined'. */
-		"noImplicitReturns": true /* Enable error reporting for codepaths that do not explicitly return in a function. */,
-		"noFallthroughCasesInSwitch": true /* Enable error reporting for fallthrough cases in switch statements. */,
-		// "noUncheckedIndexedAccess": true,                 /* Add 'undefined' to a type when accessed using an index. */
-		// "noImplicitOverride": true,                       /* Ensure overriding members in derived classes are marked with an override modifier. */
-		// "noPropertyAccessFromIndexSignature": true,       /* Enforces using indexed accessors for keys declared using an indexed type. */
-		// "allowUnusedLabels": true,                        /* Disable error reporting for unused labels. */
-		// "allowUnreachableCode": true,                     /* Disable error reporting for unreachable code. */
+  这三者都可以设置，是否会冲突？以什么为准？
+  我们编译的时候，是在webpack配置的编译入口，所以
+    * package.json 中的 main字段标记的入口其实没有作用，type也没有作用
+    * tsconfig.json 中的 compilerOptions -> module 也不会生效
+    * 使用的是webpack解析的模块化规范，由于传入数组，表示支持多个，所以可以混用 CommonJs和ESModule
+*/
+    "module": "esnext"
+    /* Specify what module code is generated. */,
+    /* 模块查找规则 */
+    "moduleResolution": "node",
+    /* 要编译的ts文件在哪个文件夹（及其子文件夹） 由于项目走到是webpack，这里只是给编译器做提示，不影响编译（下同） */
+    //    "rootDir": "./packages" ,
+    /*
+非相对路径下的文件查找入口 给编译器做提示，不影响编译
+比如：import { Button } from 'components/Button';
+那么最终是相当于: import { Button } from './components/Button';
+ */
+    "baseUrl": "./",
+    /* 路径别名：由于使用的webpack构建，走的都是webpack，这里只是给编译器做提示，不影响编译 */
+    "paths": {
+      "@web-os-ui/os-ui/*": [
+        "./packages/os-ui/src/*"
+      ],
+      "@web-os-ui/examples/*": [
+        "./packages/examples/src/*"
+      ]
+    },
+    "allowJs": true
+    /* Allow javascript files to be compiled. */,
+    /* 没作用，走的是 @babel/preset-typescript */
+    "sourceMap": true,
+    /* ts只做类型检查，编译后不输出文件，此处应该也没啥用 */
+    "noEmit": false
+    /* Disable emitting files from a compilation. */,
+    /* 编译器会将共享的辅助函数导入到每个文件中，而不是在每个文件中生成 */
+    "importHelpers": true,
+    /* 保证导入和引用的文件名大小写一致 */
+    "forceConsistentCasingInFileNames": true,
+    /* 类型检查相关 */
+    "strict": true
+    /* Enable all strict type-checking options. */,
+    // "noImplicitAny": true,                            /* Enable error reporting for expressions and declarations with an implied 'any' type. */
+    // "strictNullChecks": true,                         /* When type checking, take into account 'null' and 'undefined'. */
+    // "strictFunctionTypes": true,                      /* When assigning functions, check to ensure parameters and the return values are subtype-compatible. */
+    // "strictBindCallApply": true,                      /* Check that the arguments for 'bind', 'call', and 'apply' methods match the original function. */
+    // "strictPropertyInitialization": true,             /* Check for class properties that are declared but not set in the constructor. */
+    // "noImplicitThis": true,                           /* Enable error reporting when 'this' is given the type 'any'. */
+    // "useUnknownInCatchVariables": true,               /* Default catch clause variables as 'unknown' instead of 'any'. */
+    // "alwaysStrict": true,                             /* Ensure 'use strict' is always emitted. */
+    "noUnusedLocals": false
+    /* Enable error reporting when local variables aren't read. */,
+    "noUnusedParameters": false
+    /* Raise an error when a function parameter isn't read. */,
+    // "exactOptionalPropertyTypes": true,               /* Interpret optional property types as written, rather than adding 'undefined'. */
+    "noImplicitReturns": true
+    /* Enable error reporting for codepaths that do not explicitly return in a function. */,
+    "noFallthroughCasesInSwitch": true
+    /* Enable error reporting for fallthrough cases in switch statements. */,
+    // "noUncheckedIndexedAccess": true,                 /* Add 'undefined' to a type when accessed using an index. */
+    // "noImplicitOverride": true,                       /* Ensure overriding members in derived classes are marked with an override modifier. */
+    // "noPropertyAccessFromIndexSignature": true,       /* Enforces using indexed accessors for keys declared using an indexed type. */
+    // "allowUnusedLabels": true,                        /* Disable error reporting for unused labels. */
+    // "allowUnreachableCode": true,                     /* Disable error reporting for unreachable code. */
 
-		/* Completeness */
-		// "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
-		/* 跳过声明文件的类型检查 */
-		"skipLibCheck": true,
-		/* 允许使用 默认导入 的方式，导入没有 默认导出 的语法 */
-		/*
-      设置成false时（默认），混用CommonJS和ESModule的时候需要开启（代码编辑器提示）：
-      // 模块 A，没有默认导出
-      export const myVariable = 42;
-      // 模块 B，使用默认导入语法
-      import myVar from './A'; // 在默认情况下，会报错
-    */
-		"allowSyntheticDefaultImports": true,
-	},
-	/* 不编译哪些内容，对应的有 include，同样，由于使用webpack，这里不起作用 */
-	"exclude": ["**/.*/", "**/build", "**/node_modules", "docs/export"],
+    /* Completeness */
+    // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
+    /* 跳过声明文件的类型检查 */
+    "skipLibCheck": true,
+    /* 允许使用 默认导入 的方式，导入没有 默认导出 的语法 */
+    /*
+  设置成false时（默认），混用CommonJS和ESModule的时候需要开启（代码编辑器提示）：
+  // 模块 A，没有默认导出
+  export const myVariable = 42;
+  // 模块 B，使用默认导入语法
+  import myVar from './A'; // 在默认情况下，会报错
+*/
+    "allowSyntheticDefaultImports": true
+  },
+  /* 不编译哪些内容，对应的有 include，同样，由于使用webpack，这里不起作用 */
+  "exclude": [
+    "**/.*/",
+    "**/build",
+    "**/node_modules",
+    "docs/export"
+  ]
 }

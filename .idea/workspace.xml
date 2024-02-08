@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8967d83d-d3d6-48ee-a4dd-2d681e8b9a8c" name="Changes" comment="feat: simplify document structure">
+    <list default="true" id="8967d83d-d3d6-48ee-a4dd-2d681e8b9a8c" name="Changes" comment="feat: complete doc structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui-docs/docs/intro.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui-docs/docusaurus.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui-docs/docusaurus.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui-docs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui-docs/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui-docs/sidebars.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui-docs/sidebars.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/examples/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/examples/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/os-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/os-ui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/os-ui/src/Button/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/os-ui/src/Button/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/os-ui/src/Text/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/os-ui/src/Text/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/os-ui/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/os-ui/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/os-ui/webpack.base.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/os-ui/webpack.base.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/os-ui/webpack.components.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/os-ui/webpack.components.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,26 +35,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "javascript.nodejs.core.library.configured.version": "20.11.0",
-    "javascript.nodejs.core.library.typings.version": "20.11.0",
-    "last_opened_file_path": "D:/Projects/LuoKing/web-os-ui/packages/ui-docs/docs/design",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "pnpm",
-    "prettierjs.PrettierConfiguration.Package": "D:\\Projects\\LuoKing\\web-os-ui\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "ts.external.directory.path": "D:\\Projects\\LuoKing\\web-os-ui\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.11.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.11.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/LuoKing/web-os-ui/packages/ui-docs/docs/design&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Projects\\LuoKing\\web-os-ui\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Projects\\LuoKing\\web-os-ui\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projects\LuoKing\web-os-ui\packages\ui-docs\docs\design" />
@@ -65,7 +69,7 @@
       <recent name="D:\Projects\LuoKing\web-os-ui\packages\docs\src\compontents" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.build:all">
     <configuration name="build:all" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/packages/os-ui/package.json" />
       <command value="run" />
@@ -118,11 +122,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build:all" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.docz:build" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.docz:dev (1)" />
-        <item itemvalue="npm.build:all" />
       </list>
     </recent_temporary>
   </component>
@@ -139,7 +143,8 @@
       <workItem from="1706971660654" duration="18135000" />
       <workItem from="1707026943979" duration="9222000" />
       <workItem from="1707149046140" duration="8629000" />
-      <workItem from="1707220598389" duration="5309000" />
+      <workItem from="1707220598389" duration="6272000" />
+      <workItem from="1707398490100" duration="8640000" />
     </task>
     <task id="LOCAL-00001" summary="style: workspace code format">
       <created>1706896421260</created>
@@ -176,11 +181,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707158328506</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: complete doc structure">
+      <created>1707242868630</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707242868630</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/packages/os-ui/src/Button/index.d.ts" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -200,6 +217,7 @@
     <MESSAGE value="feat: init docusaurus docs." />
     <MESSAGE value="feat: init docusaurus docs" />
     <MESSAGE value="feat: simplify document structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: simplify document structure" />
+    <MESSAGE value="feat: complete doc structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: complete doc structure" />
   </component>
 </project>

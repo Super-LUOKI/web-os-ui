@@ -1,6 +1,6 @@
 import React from "react"
 
-export const Text: React.FC = () => {
+export const Text: React.FC<{ text: string }> = (props) => {
 	return <>Text</>
 }
 
