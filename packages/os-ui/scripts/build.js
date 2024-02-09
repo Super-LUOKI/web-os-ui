@@ -35,22 +35,24 @@ glob("src/*/*.{ts,tsx}")
 				if (error) {
 					console.error("\x1B[31m%s\x1B[0m", `exec scripts/build.js error: ${error.message}`)
 					console.error(stdout)
-					// TODO: 删除构建出来的文件
+					process.exit(1)
 					return
 				}
 				if (stderr) {
 					console.error("\x1B[31m%s\x1B[0m", `exec scripts/build.js command error: : ${stderr}`)
 					console.error(stdout)
-					// TODO: 删除构建出来的文件
+					process.exit(1)
 					return
 				}
 				console.log(`Generated .d.ts file: ${stdout}`)
 			})
 		} else {
 			console.error("\x1B[31m%s\x1B[0m", "Not found files in scripts/build.js")
+			process.exit(1)
 		}
 	})
 	.catch((err) => {
 		console.error("\x1B[31m%s\x1B[0m", "Resolve files error in scripts/build.js")
 		console.error(err)
+		process.exit(1)
 	})
