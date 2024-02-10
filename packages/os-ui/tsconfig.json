@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     //Generates corresponding d.ts files.
-    "target": "es5",
+    "target": "esnext",
     "jsx": "react",
     "module": "esnext"
     /* Specify what module code is generated. */,
@@ -54,6 +54,7 @@
       import myVar from './A'; // 在默认情况下，会报错
     */
     "allowSyntheticDefaultImports": true
+
   },
   /* 不编译哪些内容，对应的有 include，同样，由于使用webpack，这里不起作用 */
   "include": [

@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8967d83d-d3d6-48ee-a4dd-2d681e8b9a8c" name="Changes" comment="feat: add built components type support">
+    <list default="true" id="8967d83d-d3d6-48ee-a4dd-2d681e8b9a8c" name="Changes" comment="feat: add error exit code">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/os-ui/scripts/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/os-ui/scripts/build.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/os-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/os-ui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/os-ui/src/Button/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/os-ui/src/Button/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/os-ui/src/Button/util.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/os-ui/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/os-ui/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +24,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/packages/os-ui/package.json" />
+  </component>
   <component name="ProjectId" id="2bovkJBRk1zGth5Hg6Br9Lxd1pI" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -27,26 +35,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.11.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.11.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Projects/LuoKing/web-os-ui/packages/ui-docs/docs/design&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Projects\\LuoKing\\web-os-ui\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Projects\\LuoKing\\web-os-ui\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "20.11.0",
+    "javascript.nodejs.core.library.typings.version": "20.11.0",
+    "last_opened_file_path": "D:/Projects/LuoKing/web-os-ui/packages/ui-docs/docs/design",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.jest.jest_package": "D:/Projects/LuoKing/web-os-ui/packages/os-ui/node_modules/jest",
+    "nodejs_package_manager_path": "pnpm",
+    "prettierjs.PrettierConfiguration.Package": "D:\\Projects\\LuoKing\\web-os-ui\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "ts.external.directory.path": "D:\\Projects\\LuoKing\\web-os-ui\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projects\LuoKing\web-os-ui\packages\ui-docs\docs\design" />
@@ -55,48 +64,56 @@
       <recent name="D:\Projects\LuoKing\web-os-ui\packages\os-ui" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\LuoKing\web-os-ui\packages\os-ui\src" />
+      <recent name="D:\Projects\LuoKing\web-os-ui\packages\os-ui" />
       <recent name="D:\Projects\LuoKing\web-os-ui\packages\ui-docs\docs\components\test-cpns" />
       <recent name="D:\Projects\LuoKing\web-os-ui\packages\ui-docs\docs\guides\intro" />
       <recent name="D:\Projects\LuoKing\web-os-ui\packages\examples\scripts" />
-      <recent name="D:\Projects\LuoKing\web-os-ui\packages\docs\src\compontents" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build:all">
+  <component name="RunManager" selected="Jest.Button component">
+    <configuration name="Button component" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/packages/os-ui/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/packages/os-ui" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/packages/os-ui/src/Button/button.test.tsx" />
+      <test-names>
+        <test-name value="Button component" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Button component.renders button with children correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/packages/os-ui/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/packages/os-ui" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/packages/os-ui/src/Button/button.test.tsx" />
+      <test-names>
+        <test-name value="Button component" />
+        <test-name value="renders button with children correctly" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="renders button with children correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/packages/os-ui/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/packages/os-ui" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/packages/os-ui/src/Button/button.test.tsx" />
+      <test-names>
+        <test-name value="renders button with children correctly" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="build:all" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/packages/os-ui/package.json" />
       <command value="run" />
       <scripts>
         <script value="build:all" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/packages/docs/.docz/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="dev" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="docz:build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/docs/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="docz:build" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="docz:dev (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/packages/docs/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="docz:dev" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -114,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.Button component" />
+        <item itemvalue="Jest.Button component.renders button with children correctly" />
+        <item itemvalue="Jest.renders button with children correctly" />
         <item itemvalue="npm.build:all" />
         <item itemvalue="npm.start" />
-        <item itemvalue="npm.docz:build" />
-        <item itemvalue="npm.dev" />
-        <item itemvalue="npm.docz:dev (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -137,7 +154,7 @@
       <workItem from="1707149046140" duration="8629000" />
       <workItem from="1707220598389" duration="6272000" />
       <workItem from="1707398490100" duration="8973000" />
-      <workItem from="1707453643206" duration="111000" />
+      <workItem from="1707453643206" duration="4274000" />
     </task>
     <task id="LOCAL-00001" summary="style: workspace code format">
       <created>1706896421260</created>
@@ -188,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707418896909</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: add error exit code">
+      <created>1707453794858</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707453794859</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +243,7 @@
     <MESSAGE value="feat: simplify document structure" />
     <MESSAGE value="feat: complete doc structure" />
     <MESSAGE value="feat: add built components type support" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add built components type support" />
+    <MESSAGE value="feat: add error exit code" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add error exit code" />
   </component>
 </project>
