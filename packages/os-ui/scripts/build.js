@@ -37,7 +37,6 @@ async function writeEntryFiles(chunkType) {
 		`)
 	}
 	if (content.length > 0) {
-		console.log(content)
 		fs.writeFileSync(`${outputDir}/index.js`, content.join(`\n`))
 	}
 }

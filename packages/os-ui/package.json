@@ -44,7 +44,7 @@
     "analyse:umd": "cross-env analyse=on pnpm build:umd",
     "analyse:esm": "cross-env analyse=on pnpm build:esm",
     "cpn-test": "jest",
-    "publish": "pnpm build:all && npm publish"
+    "npm-pub": "pnpm build:all && npm publish"
   },
   "devDependencies": {
     "@babel/core": "^7.23.9",
