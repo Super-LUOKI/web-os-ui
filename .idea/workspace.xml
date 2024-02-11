@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8967d83d-d3d6-48ee-a4dd-2d681e8b9a8c" name="Changes" comment="feat: update node version for ci">
+    <list default="true" id="8967d83d-d3d6-48ee-a4dd-2d681e8b9a8c" name="Changes" comment="feat: update ci workflow">
       <change beforePath="$PROJECT_DIR$/.github/workflows/doc-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/doc-ci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +147,7 @@
       <workItem from="1707220598389" duration="6272000" />
       <workItem from="1707398490100" duration="8973000" />
       <workItem from="1707453643206" duration="4827000" />
-      <workItem from="1707637640136" duration="4525000" />
+      <workItem from="1707637640136" duration="4733000" />
     </task>
     <task id="LOCAL-00001" summary="style: workspace code format">
       <created>1706896421260</created>
@@ -228,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707646188258</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feat: update ci workflow">
+      <created>1707646626620</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1707646626620</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +268,7 @@
     <MESSAGE value="feat: integrate jest and jest-dom" />
     <MESSAGE value="feat: add scripts to root proj and add github actions configuration" />
     <MESSAGE value="feat: update node version for ci" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update node version for ci" />
+    <MESSAGE value="feat: update ci workflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update ci workflow" />
   </component>
 </project>
