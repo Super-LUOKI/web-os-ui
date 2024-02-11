@@ -1,9 +1,29 @@
 {
   "name": "@web-os-ui/os-ui",
   "version": "0.0.2",
-  "description": "组件库",
+  "description": "Win11 style React component library.",
+  "keywords": [
+    "components",
+    "design",
+    "react",
+    "frontend",
+    "react-component",
+    "ui",
+    "web-os-ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Super-LUOKI/web-os-ui"
+  },
+  "author": "luoking",
+  "license": "MIT",
+  "homepage": "https://super-luoki.github.io/web-os-ui/",
+  "bugs": "https://github.com/Super-LUOKI/web-os-ui/issues",
+  "contributors": [
+    "luoking"
+  ],
   "main": "./src/index.ts",
-  "homepage": "https://<username>.github.io/<project>/",
+  "unpkg": "dist/wou.min.js",
   "scripts": {
     "build": "node ./scripts/build.js",
     "build:umd": "cross-env chunk_type=umd pnpm build",
@@ -14,9 +34,6 @@
     "analyse:esm": "cross-env analyse=on pnpm build:esm",
     "cpn-test": "jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.23.9",
     "@babel/preset-env": "^7.23.9",

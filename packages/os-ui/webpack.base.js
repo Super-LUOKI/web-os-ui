@@ -37,6 +37,9 @@ module.exports = {
 			},
 		],
 	},
+	optimization: {
+		minimize: false,
+	},
 	plugins: [new CleanWebpackPlugin()],
 	// 不打包指定的包，减小包体积
 	externals: {

@@ -22,9 +22,11 @@ function tscCmd(files, chunkType) {
 	return `tsc ${files.join(" ")} --declaration --emitDeclarationOnly --esModuleInterop --skipLibCheck --target esnext --module ${module} --jsx react --declarationDir ${outputDirMap[chunkType]}`
 }
 
+const excludeFileReg = /(\.test|\.spec.ts)\.tsx?$/
 // 使用 glob 模块匹配文件路径
 glob("src/*/*.{ts,tsx}")
-	.then((files) => {
+	.then((allFiles) => {
+		const files = allFiles.filter((path) => !excludeFileReg.test(path))
 		// 如果有匹配到文件，则执行命令
 		if (files.length > 0) {
 			// 要执行的命令
