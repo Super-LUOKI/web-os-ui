@@ -1,7 +1,7 @@
 # @web-os-ui/os-ui
 
-## 0.0.2
+## 0.0.5
 
 ### Patch Changes
 
-- Informal, internally used version
+- somebug fix

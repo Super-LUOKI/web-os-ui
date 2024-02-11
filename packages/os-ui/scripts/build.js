@@ -1,5 +1,7 @@
 const { exec } = require("child_process")
 const { glob } = require("glob")
+const path = require("path")
+const fs = require("fs")
 
 const outputDirMap = {
 	umd: "lib",
@@ -20,6 +22,24 @@ function tscCmd(files, chunkType) {
 			return 'echo "full output"'
 	}
 	return `tsc ${files.join(" ")} --declaration --emitDeclarationOnly --esModuleInterop --skipLibCheck --target esnext --module ${module} --jsx react --declarationDir ${outputDirMap[chunkType]}`
+}
+
+async function writeEntryFiles(chunkType) {
+	const outputDir = outputDirMap[chunkType]
+	let content = []
+	let buildFiles = await glob(`${outputDir}/*/*.js`)
+	const folderNames = buildFiles.map((file) => path.basename(path.dirname(file)))
+	if (chunkType === "esm") {
+		content = folderNames.map((folder) => `export * from './${folder}'`)
+	} else if (chunkType === "umd") {
+		content = folderNames.map((folder) => `const ${folder} = require('./${folder}')`)
+		content.push(`module.exports = { ${folderNames.join(`,\n`)} }
+		`)
+	}
+	if (content.length > 0) {
+		console.log(content)
+		fs.writeFileSync(`${outputDir}/index.js`, content.join(`\n`))
+	}
 }
 
 const excludeFileReg = /(\.test|\.spec.ts)\.tsx?$/
@@ -46,6 +66,7 @@ glob("src/*/*.{ts,tsx}")
 					process.exit(1)
 					return
 				}
+				writeEntryFiles(process.env.chunk_type)
 				console.log(`Generated .d.ts file: ${stdout}`)
 			})
 		} else {

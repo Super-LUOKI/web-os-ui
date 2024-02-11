@@ -43,8 +43,8 @@ module.exports = {
 	plugins: [new CleanWebpackPlugin()],
 	// 不打包指定的包，减小包体积
 	externals: {
-		react: "React",
-		"react-dom": "ReactDOM",
+		react: "react",
+		"react-dom": "react-dom",
 	},
 }
 

@@ -1,12 +1,13 @@
 {
   "name": "@web-os-ui/examples",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "示例",
   "main": "./src/index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack serve -c scripts/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack -c scripts/webpack.prod.js"
   },
+  "private": true,
   "keywords": [],
   "author": "",
   "license": "ISC",
