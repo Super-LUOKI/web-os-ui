@@ -5,7 +5,18 @@
   "scripts": {
     "prepare": "husky",
     "lint": "eslint --ext .ts,.tsx,.jsx,.js --fix --quiet ./packages",
-    "prettier-pkgs": "prettier --write ./packages/**/*.{js,ts,jsx,tsx}"
+    "prettier-pkgs": "prettier --write ./packages/**/*.{js,ts,jsx,tsx}",
+    "docs:build": "pnpm run --filter @web-os-ui/ui-docs build",
+    "docs:start": "pnpm run --filter @web-os-ui/ui-docs start",
+    "docs:deploy": "pnpm run --filter @web-os-ui/ui-docs deploy",
+    "ui:esm-build": "pnpm run --filter @web-os-ui/os-ui build:esm",
+    "ui:umd-build": "pnpm run --filter @web-os-ui/os-ui build:umd",
+    "ui:full-build": "pnpm run --filter @web-os-ui/os-ui build:umdFull",
+    "ui:all-build" : "pnpm run --filter @web-os-ui/os-ui build:all",
+    "ui:esm-analyse": "pnpm run --filter @web-os-ui/os-ui analyse:esm",
+    "ui:umd-analyse": "pnpm run --filter @web-os-ui/os-ui analyse:umd",
+    "exp:dev": "pnpm run --filter @web-os-ui/examples dev",
+    "exp:build": "pnpm run --filter @web-os-ui/examples build"
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [

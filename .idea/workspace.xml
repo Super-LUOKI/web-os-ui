@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8967d83d-d3d6-48ee-a4dd-2d681e8b9a8c" name="Changes" comment="feat: add error exit code">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="8967d83d-d3d6-48ee-a4dd-2d681e8b9a8c" name="Changes" comment="feat: integrate jest and jest-dom">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/os-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/os-ui/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/os-ui/src/Button/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/os-ui/src/Button/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/os-ui/src/Button/util.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/os-ui/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/os-ui/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui-docs/docusaurus.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui-docs/docusaurus.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,7 @@
     "nodejs_package_manager_path": "pnpm",
     "prettierjs.PrettierConfiguration.Package": "D:\\Projects\\LuoKing\\web-os-ui\\node_modules\\prettier",
     "settings.editor.selected.configurable": "preferences.keymap",
-    "ts.external.directory.path": "D:\\Projects\\LuoKing\\web-os-ui\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "D:\\Projects\\LuoKing\\web-os-ui\\packages\\ui-docs\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -71,7 +69,7 @@
       <recent name="D:\Projects\LuoKing\web-os-ui\packages\examples\scripts" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.Button component">
+  <component name="RunManager" selected="npm.exp:dev">
     <configuration name="Button component" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/packages/os-ui/node_modules/jest" />
@@ -97,33 +95,31 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="renders button with children correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <jest-package value="$PROJECT_DIR$/packages/os-ui/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$/packages/os-ui" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/packages/os-ui/src/Button/button.test.tsx" />
-      <test-names>
-        <test-name value="renders button with children correctly" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="build:all" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/packages/os-ui/package.json" />
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/packages/ui-docs/package.json" />
       <command value="run" />
       <scripts>
-        <script value="build:all" />
+        <script value="build" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/packages/ui-docs/package.json" />
+    <configuration name="exp:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="start" />
+        <script value="exp:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="ui:umd-analyse" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="ui:umd-analyse" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -131,11 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.exp:dev" />
+        <item itemvalue="npm.ui:umd-analyse" />
+        <item itemvalue="npm.build" />
         <item itemvalue="Jest.Button component" />
         <item itemvalue="Jest.Button component.renders button with children correctly" />
-        <item itemvalue="Jest.renders button with children correctly" />
-        <item itemvalue="npm.build:all" />
-        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -154,7 +150,8 @@
       <workItem from="1707149046140" duration="8629000" />
       <workItem from="1707220598389" duration="6272000" />
       <workItem from="1707398490100" duration="8973000" />
-      <workItem from="1707453643206" duration="4274000" />
+      <workItem from="1707453643206" duration="4827000" />
+      <workItem from="1707637640136" duration="3747000" />
     </task>
     <task id="LOCAL-00001" summary="style: workspace code format">
       <created>1706896421260</created>
@@ -212,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707453794859</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: integrate jest and jest-dom">
+      <created>1707589610120</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1707589610120</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +248,7 @@
     <MESSAGE value="feat: complete doc structure" />
     <MESSAGE value="feat: add built components type support" />
     <MESSAGE value="feat: add error exit code" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add error exit code" />
+    <MESSAGE value="feat: integrate jest and jest-dom" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: integrate jest and jest-dom" />
   </component>
 </project>

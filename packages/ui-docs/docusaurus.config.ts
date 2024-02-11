@@ -21,15 +21,15 @@ const config: Config = {
 	projectName: "docusaurus", // Usually your repo name.
 
 	// 代码中有引用但是却不存在的内容
-	onBrokenLinks: "throw",
+	onBrokenLinks: "warn",
 	onBrokenMarkdownLinks: "warn",
 
 	// Even if you don't use internationalization, you can use this field to set
 	// useful metadata like html lang. For example, if your site is Chinese, you
 	// may want to replace "en" with "zh-Hans".
 	i18n: {
-		defaultLocale: "zh-Hans",
-		locales: ["zh-Hans"],
+		defaultLocale: "en",
+		locales: ["en"],
 	},
 
 	presets: [

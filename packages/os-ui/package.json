@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "组件库",
   "main": "./src/index.ts",
+  "homepage": "https://<username>.github.io/<project>/",
   "scripts": {
     "build": "node ./scripts/build.js",
     "build:umd": "cross-env chunk_type=umd pnpm build",
