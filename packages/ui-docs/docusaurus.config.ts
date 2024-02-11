@@ -12,7 +12,7 @@ const config: Config = {
 	url: "https://your-docusaurus-site.example.com",
 	// Set the /<baseUrl>/ pathname under which your site is served
 	// For GitHub pages deployment, it is often '/<projectName>/'
-	baseUrl: "/",
+	baseUrl: "/web-os-ui/",
 
 	// 快速部署的配置
 	// GitHub pages deployment config.
