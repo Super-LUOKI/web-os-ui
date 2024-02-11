@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8967d83d-d3d6-48ee-a4dd-2d681e8b9a8c" name="Changes" comment="feat: integrate jest and jest-dom">
+    <list default="true" id="8967d83d-d3d6-48ee-a4dd-2d681e8b9a8c" name="Changes" comment="feat: add scripts to root proj and add github actions configuration">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/doc-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/doc-ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/web-os-ui.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/web-os-ui.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/os-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/os-ui/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui-docs/docusaurus.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui-docs/docusaurus.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +150,7 @@
       <workItem from="1707220598389" duration="6272000" />
       <workItem from="1707398490100" duration="8973000" />
       <workItem from="1707453643206" duration="4827000" />
-      <workItem from="1707637640136" duration="3747000" />
+      <workItem from="1707637640136" duration="4102000" />
     </task>
     <task id="LOCAL-00001" summary="style: workspace code format">
       <created>1706896421260</created>
@@ -216,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707589610120</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat: add scripts to root proj and add github actions configuration">
+      <created>1707645871744</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1707645871744</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +255,7 @@
     <MESSAGE value="feat: add built components type support" />
     <MESSAGE value="feat: add error exit code" />
     <MESSAGE value="feat: integrate jest and jest-dom" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: integrate jest and jest-dom" />
+    <MESSAGE value="feat: add scripts to root proj and add github actions configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add scripts to root proj and add github actions configuration" />
   </component>
 </project>
