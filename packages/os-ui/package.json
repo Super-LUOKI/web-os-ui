@@ -1,6 +1,6 @@
 {
   "name": "@web-os-ui/os-ui",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Win11 style React component library.",
   "keywords": [
     "components",
@@ -29,7 +29,8 @@
     "dist",
     "es",
     "lib",
-    "readme.md"
+    "readme.md",
+    "CHANGELOG.md"
   ],
   "publishConfig": {
     "access": "public",

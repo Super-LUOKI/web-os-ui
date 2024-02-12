@@ -1,0 +1,40 @@
+{
+  "name": "@web-os-ui/cli",
+  "version": "1.0.0",
+  "description": "Quickly build a scaffolding tool for a React project based on WebOS-UI",
+  "keywords": [
+    "cli",
+    "web-os-ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Super-LUOKI/web-os-ui"
+  },
+  "author": "luoking",
+  "license": "MIT",
+  "homepage": "https://super-luoki.github.io/web-os-ui/",
+  "bugs": "https://github.com/Super-LUOKI/web-os-ui/issues",
+  "contributors": [
+    "luoking"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "new-wos": "bin/new-wos.js"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.0.0",
+    "download-git-repo": "^3.0.2",
+    "inquirer": "^9.2.14",
+    "log-symbols": "^6.0.0",
+    "ora": "^8.0.1"
+  }
+}

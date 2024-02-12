@@ -33,14 +33,25 @@ async function writeEntryFiles(chunkType) {
 		content = folderNames.map((folder) => `export * from './${folder}'`)
 	} else if (chunkType === "umd") {
 		content = folderNames.map((folder) => `const ${folder} = require('./${folder}')`)
-		content.push(`module.exports = { ${folderNames.join(`,\n`)} }
-		`)
+
+		content.push(`module.exports = {`)
+		content.push(`${folderNames.map((name) => `	${name}: ${name}.default`).join(`,\n`)}`)
+		content.push("}")
 	}
 	if (content.length > 0) {
 		fs.writeFileSync(`${outputDir}/index.js`, content.join(`\n`))
 	}
 }
-
+async function writeTypeFiles(chunkType) {
+	const outputDir = outputDirMap[chunkType]
+	let content = []
+	let typeFiles = await glob(`${outputDir}/*/*.d.ts`)
+	const folderNames = typeFiles.map((file) => path.basename(path.dirname(file)))
+	content = folderNames.map((file) => `export * from "./${file}"`)
+	if (content.length > 0) {
+		fs.writeFileSync(`${outputDir}/index.d.ts`, content.join(`\n`))
+	}
+}
 const excludeFileReg = /(\.test|\.spec.ts)\.tsx?$/
 // 使用 glob 模块匹配文件路径
 glob("src/*/*.{ts,tsx}")
@@ -52,7 +63,7 @@ glob("src/*/*.{ts,tsx}")
 			const command = `pnpm webpack --config webpack.components.js && ${tscCmd(files, process.env.chunk_type)}`
 
 			// 执行命令
-			exec(command, (error, stdout, stderr) => {
+			exec(command, async (error, stdout, stderr) => {
 				if (error) {
 					console.error("\x1B[31m%s\x1B[0m", `exec scripts/build.js error: ${error.message}`)
 					console.error(stdout)
@@ -65,7 +76,8 @@ glob("src/*/*.{ts,tsx}")
 					process.exit(1)
 					return
 				}
-				writeEntryFiles(process.env.chunk_type)
+				await writeEntryFiles(process.env.chunk_type)
+				await writeTypeFiles(process.env.chunk_type)
 				console.log(`Generated .d.ts file: ${stdout}`)
 			})
 		} else {
