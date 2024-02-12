@@ -1,6 +1,6 @@
 {
   "name": "@web-os-ui/cli",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "Quickly build a scaffolding tool for a React project based on WebOS-UI",
   "keywords": [
     "cli",

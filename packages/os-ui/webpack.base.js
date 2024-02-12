@@ -1,4 +1,3 @@
-const path = require("path")
 // 打包完分析包大小插件
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin
 // 删除上次打包文件的插件
