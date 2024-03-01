@@ -6,7 +6,6 @@ const fs = require("fs")
 const outputDirMap = {
 	umd: "lib",
 	esm: "es",
-	umdFull: "dist",
 }
 
 function tscCmd(files, chunkType) {
@@ -19,7 +18,8 @@ function tscCmd(files, chunkType) {
 			module = "esnext"
 			break
 		default:
-			return 'echo "full output"'
+			console.error(`chunk_type '${process.env.chunk_type}' is not support, use 'umd' or 'esm'`)
+			process.exit(1)
 	}
 	const options = [
 		"--declaration",
@@ -32,6 +32,7 @@ function tscCmd(files, chunkType) {
 		"--jsx react",
 		`--declarationDir ${outputDirMap[chunkType]}`,
 	]
+	console.log({ cmd: `tsc ${files.join(" ")} ${options.join(" ")}` })
 	return `tsc ${files.join(" ")} ${options.join(" ")}`
 }
 

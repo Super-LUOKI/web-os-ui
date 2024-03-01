@@ -1,7 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 import { Button } from "@web-os-ui/os-ui"
-
 const App = () => {
 	return (
 		<div>

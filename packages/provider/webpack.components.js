@@ -22,11 +22,6 @@ const outputDirMap = {
 }
 const umdConfig = {
 	entry: entries,
-	resolve: {
-		alias: {
-			"@web-os-ui/provider": "@web-os-ui/provider/lib",
-		},
-	},
 	output: {
 		path: path.resolve(__dirname, outputDirMap["umd"]),
 		filename: "[name]/index.js",
@@ -40,11 +35,6 @@ const umdConfig = {
 // ESModule 组件单独打包
 const esmConfig = {
 	entry: entries,
-	resolve: {
-		alias: {
-			"@web-os-ui/provider": "@web-os-ui/provider/es",
-		},
-	},
 	output: {
 		path: path.resolve(__dirname, outputDirMap["esm"]),
 		filename: "[name]/index.js",
@@ -58,24 +48,6 @@ const esmConfig = {
 	},
 }
 
-// umd 不分包，直接打包
-const umdFullConfig = {
-	entry: path.resolve(__dirname, "src", "index.ts"),
-	resolve: {
-		alias: {
-			"@web-os-ui/provider": "@web-os-ui/provider/lib",
-		},
-	},
-	output: {
-		path: path.resolve(__dirname, outputDirMap["umdFull"]),
-		filename: "wou.min.js",
-		chunkFilename: "[id].js",
-		library: "[name]", // 指定的就是你使用require时的模块名
-		libraryTarget: "umd",
-		umdNamedDefine: true, // 会对 UMD 的构建过程中的 AMD 模块进行命名。否则就使用匿名的 define
-	},
-}
-
 let optConfig = ""
 switch (process.env.chunk_type) {
 	case "umd":
@@ -83,9 +55,6 @@ switch (process.env.chunk_type) {
 		break
 	case "esm":
 		optConfig = esmConfig
-		break
-	case "umdFull":
-		optConfig = umdFullConfig
 		break
 	default:
 		console.error(

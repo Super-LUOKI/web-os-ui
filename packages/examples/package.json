@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@web-os-ui/os-ui": "workspace:^",
+    "@web-os-ui/os-ui": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

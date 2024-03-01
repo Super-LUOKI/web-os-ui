@@ -1,4 +1,5 @@
 import React from "react"
+import { Tag } from "@web-os-ui/provider"
 
 export type ButtonProps = {
 	/** 按钮文本 */
@@ -8,6 +9,7 @@ export type ButtonProps = {
 }
 export const Button: React.FC<ButtonProps> = (props) => {
 	const { children } = props
+	const t = Tag
 	return <button>{children}</button>
 }
 

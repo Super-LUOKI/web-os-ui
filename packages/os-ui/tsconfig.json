@@ -7,7 +7,9 @@
     /* Specify what module code is generated. */,
     "moduleResolution": "node",
     "baseUrl": "./",
-    "paths": {},
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "allowJs": true
     /* Allow javascript files to be compiled. */,
     "sourceMap": true,

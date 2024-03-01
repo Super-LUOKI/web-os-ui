@@ -10,4 +10,8 @@ packages/os-ui/lib/*
 packages/os-ui/dist/*
 packages/os-ui/coverage/*
 
+packages/provider/es/*
+packages/provider/lib/*
+packages/provider/coverage/*
+
 packages/docs/.docz/**

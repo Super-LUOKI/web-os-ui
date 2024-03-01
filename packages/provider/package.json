@@ -1,16 +1,8 @@
 {
-  "name": "@web-os-ui/os-ui",
-  "version": "0.0.9",
-  "description": "Win11 style React component library.",
-  "keywords": [
-    "components",
-    "design",
-    "react",
-    "frontend",
-    "react-component",
-    "ui",
-    "web-os-ui"
-  ],
+  "name": "@web-os-ui/provider",
+  "version": "0.0.1",
+  "keywords": [],
+  "description": "@web-os-ui configure module",
   "repository": {
     "type": "git",
     "url": "https://github.com/Super-LUOKI/web-os-ui"
@@ -23,10 +15,8 @@
     "luoking"
   ],
   "main": "lib/index.js",
-  "unpkg": "dist/wou.min.js",
   "module": "es/index.js",
   "files": [
-    "dist",
     "es",
     "lib",
     "readme.md",
@@ -40,8 +30,7 @@
     "build": "node ./scripts/build.js",
     "build:umd": "cross-env chunk_type=umd pnpm build",
     "build:esm": "cross-env chunk_type=esm pnpm build",
-    "build:umdFull": "cross-env chunk_type=umdFull pnpm build",
-    "build:all": "pnpm build:umd && pnpm build:esm && pnpm build:umdFull",
+    "build:all": "pnpm build:umd && pnpm build:esm",
     "analyse:umd": "cross-env analyse=on pnpm build:umd",
     "analyse:esm": "cross-env analyse=on pnpm build:esm",
     "cpn-test": "jest",
@@ -76,7 +65,7 @@
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",
-    "@web-os-ui/provider": "workspace:*",
+    "@web-os-ui/provider": "workspace:^",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
