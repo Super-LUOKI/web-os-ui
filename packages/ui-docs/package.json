@@ -23,9 +23,11 @@
     "@web-os-ui/os-ui": "workspace:*",
     "@web-os-ui/provider": "workspace:*",
     "clsx": "^2.0.0",
+    "i18next": "^23.10.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-i18next": "^14.0.5"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.1.1",

@@ -1,7 +1,13 @@
 import React from "react"
-import { defaultTheme, Theme } from "../ConfigProvider"
+import { defaultTheme } from "../ConfigProvider"
+import { Theme } from "../ConfigProvider/type"
 
-export function withThemeDefault(rawProps: any, themeAttr: keyof Theme): (typeof defaultTheme)[keyof Theme] | null {
+export function withThemeDefault(
+	rawProps: {
+		theme?: Partial<Theme>
+	},
+	themeAttr: keyof Theme
+): (typeof defaultTheme)[keyof Theme] | null {
 	const userThemeAttr = rawProps?.theme?.[themeAttr]
 	const defaultThemeAttr = defaultTheme?.[themeAttr]
 	if (!userThemeAttr && !defaultThemeAttr) {
@@ -12,5 +18,4 @@ export function withThemeDefault(rawProps: any, themeAttr: keyof Theme): (typeof
 	return defaultThemeAttr
 }
 
-const defaultExp = { withThemeDefault }
-export default defaultExp
+export default { withThemeDefault }

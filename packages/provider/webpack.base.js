@@ -50,6 +50,8 @@ module.exports = {
 		"react-dom": "react-dom",
 		"@emotion/styled": "@emotion/styled",
 		"@emotion/react": "@emotion/react",
+		"react-i18next": "react-i18next",
+		i18next: "i18next",
 	},
 }
 

@@ -51,6 +51,8 @@ module.exports = {
 		"@web-os-ui/provider": "@web-os-ui/provider",
 		"@emotion/styled": "@emotion/styled",
 		"@emotion/react": "@emotion/react",
+		"react-i18next": "react-i18next",
+		i18next: "i18next",
 	},
 }
 
