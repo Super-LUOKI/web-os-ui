@@ -58,7 +58,9 @@ async function writeTypeFiles(chunkType) {
 	const outputDir = outputDirMap[chunkType]
 	let content = []
 	let typeFiles = await glob(`${outputDir}/*/*.d.ts`)
-	const folderNames = typeFiles.map((file) => path.basename(path.dirname(file)))
+	let folderNames = typeFiles.map((file) => path.basename(path.dirname(file)))
+	// 去重
+	folderNames = Array.from(new Set(folderNames))
 	content = folderNames.map((file) => `export * from "./${file}"`)
 	if (content.length > 0) {
 		fs.writeFileSync(`${outputDir}/index.d.ts`, content.join(`\n`))
