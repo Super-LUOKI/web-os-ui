@@ -28,6 +28,7 @@ function tscCmd(files, chunkType) {
 		"--skipLibCheck",
 		"--skipDefaultLibCheck",
 		"--target esnext",
+		"--moduleResolution node",
 		`--module ${module}`,
 		"--jsx react",
 		`--declarationDir ${outputDirMap[chunkType]}`,

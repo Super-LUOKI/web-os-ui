@@ -48,6 +48,9 @@ module.exports = {
 	externals: {
 		react: "react",
 		"react-dom": "react-dom",
+		"@web-os-ui/provider": "@web-os-ui/provider",
+		"@emotion/styled": "@emotion/styled",
+		"@emotion/react": "@emotion/react",
 	},
 }
 

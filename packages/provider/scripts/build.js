@@ -21,18 +21,23 @@ function tscCmd(files, chunkType) {
 			console.error(`chunk_type '${process.env.chunk_type}' is not support, use 'umd' or 'esm'`)
 			process.exit(1)
 	}
+
+	let declarationDirVal = outputDirMap[chunkType]
+	if (files.length === 1) {
+		declarationDirVal += "/" + path.basename(path.dirname(files[0]))
+	}
 	const options = [
 		"--declaration",
 		"--emitDeclarationOnly",
 		"--esModuleInterop",
 		"--skipLibCheck",
 		"--skipDefaultLibCheck",
+		"--moduleResolution node",
 		"--target esnext",
 		`--module ${module}`,
 		"--jsx react",
-		`--declarationDir ${outputDirMap[chunkType]}`,
+		`--declarationDir ${declarationDirVal}`,
 	]
-	console.log({ cmd: `tsc ${files.join(" ")} ${options.join(" ")}` })
 	return `tsc ${files.join(" ")} ${options.join(" ")}`
 }
 
@@ -54,6 +59,7 @@ async function writeEntryFiles(chunkType) {
 		fs.writeFileSync(`${outputDir}/index.js`, content.join(`\n`))
 	}
 }
+
 async function writeTypeFiles(chunkType) {
 	const outputDir = outputDirMap[chunkType]
 	let content = []
@@ -64,6 +70,7 @@ async function writeTypeFiles(chunkType) {
 		fs.writeFileSync(`${outputDir}/index.d.ts`, content.join(`\n`))
 	}
 }
+
 const excludeFileReg = /(\.test|\.spec.ts)\.tsx?$/
 // 使用 glob 模块匹配文件路径
 glob("src/*/*.{ts,tsx}")
