@@ -183,7 +183,7 @@ function getTruthyCode(replacedCode, externalAlias) {
 			}
 			const [typeInfos, expName] = parsePropsTsTypeByPath(src)
 			const newCode = getComponentsByType(typeInfos, expName)
-			return `<Playground code={${JSON.stringify(newCode)}}>${newCode}</Playground>`
+			return `<Playground code={${JSON.stringify(newCode)}}>${newCode}</Playground>[import-${expName}]`
 		}
 	}
 	return replacedCode
@@ -196,8 +196,7 @@ module.exports = function (source) {
 
 	const matchedCode = source.match(allCodeShowRegExp)
 	const matchedNoChildCode = source.match(allCodeShowNoChildrenRegExp)
-	// let extraImport = "\n\nimport Playground from '@theme/Playground';\n"
-	let extraImport = ""
+	let extraImport = "\nimport Playground from '@theme/Playground';\n"
 	let lastSource = source
 
 	if (matchedCode || matchedNoChildCode) {
@@ -209,13 +208,19 @@ module.exports = function (source) {
 			}
 		})
 		// 替换可能多余的引入
-		// lastSource = lastSource.replace("import Playground from '@theme/Playground';", "")
-		// lastSource = lastSource.replace("import Playground from '@theme/Playground'", "")
-		// if (/(---\n[^]*\n---)([^]*)/.test(lastSource)) {
-		// 	lastSource = lastSource.replace(/(---\n[^]*\n---)([^]*)/, `$1${extraImport}$2`)
-		// } else {
-		// 	lastSource = `${extraImport}\n${lastSource}`
-		// }
+		lastSource = lastSource.replaceAll(/import Playground from ['"]@theme\/Playground['"];?/g, "")
+		// 获取用到的组件名
+		let usedCpns = [...lastSource.matchAll(/\[import-(.*)\]/g)]
+		usedCpns = Array.from(new Set(usedCpns.map((item) => item[1])))
+		// 删除标记
+		lastSource = lastSource.replaceAll(/\[import-(.*)\]/g, "")
+		const usedCpnImports = usedCpns.map((cpn) => `import { ${cpn} } from "@web-os-ui/os-ui"`)
+		const additionImport = `\n${usedCpnImports.join("\n")}\n${extraImport}`
+		if (/(---\n[^]*\n---)([^]*)/.test(lastSource)) {
+			lastSource = lastSource.replace(/(---\n[^]*\n---)([^]*)/, `$1${additionImport}$2`)
+		} else {
+			lastSource = `${additionImport}\n${lastSource}`
+		}
 	}
 
 	return lastSource
