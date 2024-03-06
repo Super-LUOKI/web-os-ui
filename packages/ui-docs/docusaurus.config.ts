@@ -1,6 +1,7 @@
 import { themes as prismThemes } from "prism-react-renderer"
 import type { Config } from "@docusaurus/types"
 import type * as Preset from "@docusaurus/preset-classic"
+import * as path from "path"
 
 const config: Config = {
 	title: "ConfigSiteTitle",
@@ -49,6 +50,17 @@ const config: Config = {
 					customCss: "./src/css/custom.css",
 				},
 			} satisfies Preset.Options,
+		],
+	],
+
+	plugins: [
+		[
+			"./plugins/mdx",
+			{
+				externalAlias: {
+					"$os-ui": path.resolve(__dirname, "..", "os-ui", "src"),
+				},
+			},
 		],
 	],
 

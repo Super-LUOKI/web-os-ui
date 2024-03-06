@@ -1,9 +1,49 @@
 import {ConfigProvider} from "@web-os-ui/provider"
 import {Button} from "@web-os-ui/os-ui"
+import CodeBlock from '@theme/CodeBlock';
+import Playground from "@theme/Playground"
+import CodeShow from "@components/boxes/CodeShow"
+import PropsTable from "../../../src/components/boxes/PropsTable"
 
 <ConfigProvider theme={{colors: {primary: 'skyblue'}}} lang="zh">
 	<Button type="primary">LuoKing</Button>
 </ConfigProvider>
+
+
+<hr />
+
+<PropsTable src="$os-ui/Button" />
+
+<CodeShow src="$os-ui/Button" abc={123} />
+
+<CodeShow src="$os-ui/Button" abc={123}>
+	<ConfigProvider theme={{colors: {primary: 'skyblue'}}} lang="zh">
+		<Button type="primary">LuoKing</Button>
+	</ConfigProvider>
+</CodeShow>
+
+<hr />
+
+
+<CodeBlock
+	language="jsx"
+	title="/src/components/HelloCodeTitle.js"
+	showLineNumbers>
+	{`function HelloCodeTitle(props) {
+  return <h1>你好，{props.name}</h1>;
+}`}
+</CodeBlock>
+
+## playground
+
+<Playground code={`<button>helloworld</button>\n<button>helloworld</button>`}>
+	<button>hello-world</button>
+	<button>hello-world</button>
+	<div>abc</div>
+	<button>hello-world</button>
+	<button>hello-world</button>
+	<button>hello-world</button>
+</Playground>
 
 ```jsx
 <Button type="primary">LuoKing</Button>

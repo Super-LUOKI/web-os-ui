@@ -1,0 +1,25 @@
+.playground {
+    border-radius: 5px;
+    border: .5px solid rgba(0, 0, 0, .1);
+    transition: height ease 4000ms;
+}
+
+.cpnArea {
+    border-bottom: .5px solid rgba(0, 0, 0, .1);
+    padding: 10px;
+}
+
+.sourceArea {
+
+}
+
+.codeBar {
+    width: 100%;
+    margin: 5px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.codeArea {
+
+}
